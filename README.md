@@ -49,6 +49,14 @@ common.c: Common function and data structure definition
   - **Sphere with void area models**: Representing spherical cavities or voids embedded in a 3D matrix.
   - **Oil cavern models**: Specifically designed to simulate oil reservoir environments where seismic wave propagation is crucial for microseismic monitoring.
 
+- **Text Output in the Command Window**:
+
+The code calculates the error between each method’s travel time results  and the reference values . The error is computed using three different metrics: L1 , L2 , and Linf .
+
+   - **L1**:mean absolute error
+   - **L2**:mean squared error
+   - **Linf**: maximum absolute error
+
 
 ## Applications
 
@@ -61,6 +69,16 @@ This method can be widely applied in **seismology**, **geophysics**, and **geolo
 ## Function Example
 
 Before using the function in MATLAB, you must first compile the code by running mex msfm3d.c. After compilation, you can execute different models by entering the corresponding scripts in the MATLAB command window, depending on the scenario you want to simulate.
+
+**Instructions**:
+
+- **T1_FMM1**: using first-order derivatives without cross neighbors.
+
+- **T1_MSFM1**: using first-order derivatives with cross neighbors.
+
+- **T1_FMM2**: using second-order derivatives without cross neighbors.
+
+- **T1_MSFM2**: using second-order derivatives with cross neighbors.
 
 Examples of core features of this project are:
 
