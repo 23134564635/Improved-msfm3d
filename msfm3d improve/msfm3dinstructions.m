@@ -31,7 +31,7 @@
 %   SourcePoint = [21; 21; 21];
 %   SpeedImage = ones([41 41 41]);
 %   [X,Y,Z] = ndgrid(1:41, 1:41, 1:41);
-%   T1 = sqrt((X-SourcePoint(1)).^2 + (Y-SourcePoint(2)).^2 + (Z-SourcePoint(3)).^2);
+%   T1 = sqrt((X-SourcePoint(1)).^2 + (Y-SourcePoint(2)).^2 + (Z-SourcePoint(3)).^2)./ SpeedImage;
 %
 %   % Run fast marching 1th order, 1th order multi stencil 
 %   % and 2th orde and 2th orde multi stencil
