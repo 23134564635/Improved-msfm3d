@@ -96,16 +96,16 @@ SpeedImage = ones([41, 41, 41]);
 T1 = sqrt((X - SourcePoint(1)).^2 + (Y - SourcePoint(2)).^2 + (Z - SourcePoint(3)).^2) ./ SpeedImage;
 
 % First-order FMM
-T1_FMM1 = msfm3d(SpeedImage, SourcePoint, false, false);
+tic; T1_FMM1 = msfm3d(SpeedImage, SourcePoint, false, false); toc;
 
 % First-order MSFM
-T1_MSFM1 = msfm3d(SpeedImage, SourcePoint, false, true);
+tic; T1_MSFM1 = msfm3d(SpeedImage, SourcePoint, false, true); toc;
 
 % Second-order FMM
-T1_FMM2 = msfm3d(SpeedImage, SourcePoint, true, false);
+tic; T1_FMM2 = msfm3d(SpeedImage, SourcePoint, true, false); toc;
 
 % Second-order MSFM
-T1_MSFM2 = msfm3d(SpeedImage, SourcePoint, true, true);
+tic; T1_MSFM2 = msfm3d(SpeedImage, SourcePoint, true, true); toc;
 
 % Compare with ground truth T1
 fprintf('Method   L1         L2         Linf\n');
