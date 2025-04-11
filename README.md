@@ -70,6 +70,12 @@ This method can be widely applied in **seismology**, **geophysics**, and **geolo
 
 Before using the function in MATLAB, you must first compile the code by running mex msfm3d.c. After compilation, you can execute different models by entering the corresponding scripts in the MATLAB command window, depending on the scenario you want to simulate.
 
+```matlab
+
+mex msfm3d.c
+
+```
+
 **Instructions**:
 
 - **T1_FMM1**: using first-order derivatives without cross neighbors.
@@ -80,11 +86,9 @@ Before using the function in MATLAB, you must first compile the code by running 
 
 - **T1_MSFM2**: using second-order derivatives with cross neighbors.
 
-Examples of core features of this project are:
+Examples of core features of this project:
 
 ```matlab
-
-mex msfm3d.c
 
 SourcePoint = [21; 21; 21];
 SpeedImage = ones([41, 41, 41]);
